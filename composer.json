@@ -1,0 +1,7 @@
+{
+    "name": "trad3r/dump",
+    "description": "Beautiful wrap for var_dump",
+    "require": {
+        "php": "^5.3",        
+    }
+}
