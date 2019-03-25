@@ -5,6 +5,7 @@
  * Date: 25.03.19
  * Time: 10:42
  */
+namespace trad3r\dump;
 
 class Dump
 {
