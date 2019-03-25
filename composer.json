@@ -1,7 +1,7 @@
 {
     "name": "trad3r/dump",
     "type": "library",
-    "description": "Beautiful wrap for var_dump",
+    "description": "Beautiful mechanism for exploring and dumping PHP variables",
     "keywords": ["dump", "debug"],
     "license": "MIT",
     "authors": [
@@ -15,7 +15,7 @@
         }
     ],
     "require": {
-        "php": "^5.3"
+        "php": "^4.0.4"
     },    
     "autoload": {
         "files": [ "Dump.php" ]        
