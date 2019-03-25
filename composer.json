@@ -20,5 +20,5 @@
     "autoload": {
         "files": [ "Dump.php" ]        
     },    
-    "minimum-stability": "dev"    
+    "minimum-stability": "dev"
 }
