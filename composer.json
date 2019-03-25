@@ -1,7 +1,24 @@
 {
     "name": "trad3r/dump",
+    "type": "library",
     "description": "Beautiful wrap for var_dump",
+    "keywords": ["dump", "debug"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Valerij Dorokholsky",
+            "email": "tatusr@gmail.com"
+        },
+        {
+            "name": "Daniil Ryaguzov",
+            "email": "tatusr@gmail.com"
+        }
+    ],
     "require": {
         "php": "^5.3"
-    }
+    },    
+    "autoload": {
+        "files": [ "Dump.php" ]        
+    },    
+    "minimum-stability": "dev"
 }
