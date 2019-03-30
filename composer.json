@@ -11,11 +11,11 @@
         },
         {
             "name": "Daniil Ryaguzov",
-            "email": "tatusr@gmail.com"
+            "email": ""
         }
     ],
     "require": {
-        "php": "^7.2.15"
+        "php": ">=5.3.3"
     },    
     "autoload": {
         "files": [ "Dump.php" ]        
