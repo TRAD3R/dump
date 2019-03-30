@@ -76,6 +76,8 @@ class Dump
                             cursor: pointer;
                             background: transparent;'
                             class='block opened'>-</div> {";
+        }else{
+            $str = $data;
         }
 
         return $str;
