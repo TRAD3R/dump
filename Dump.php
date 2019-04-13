@@ -9,20 +9,26 @@ namespace trad3r\dump;
 
 class Dump
 {
+    private function __construct()
+    {
+    }
+
     public static function show($data)
     {
+        ini_set('xdebug.max_nesting_level', 20000);
+        ini_set('memory_limit', '512M');
         $str = "<div style='font-family: Courier New,serif;'>";
         $str .= self::addOpenningBracket($data);
 
-        $result = self::dump($str, $data);
+        self::dump_custom($str, $data);
 
-        $result .= "</div>";
+        $str .= "</div>";
 
-        $result .= self::addJS();
-        echo $result;
+        $str .= self::addJS();
+        echo $str;
     }
 
-    private static function dump($str, $data)
+    private static function dump_custom(&$str, $data)
     {
         if(is_array($data) || is_object($data)){
             $str .= "<div style='padding: 5px 20px;box-sizing: border-box;'>";
@@ -38,7 +44,7 @@ class Dump
                     box-sizing: border-box;
                     ";
                 }
-                $str = self::dump($str, $item);
+                self::dump_custom($str, $item);
                 $str .= "</div>";
             }
             $str .= self::addClosingBracket($data);
@@ -47,7 +53,6 @@ class Dump
         }else{
             $str .= 'color: green;\'>"' . $data . '"</span>';
         }
-        return $str;
     }
 
     private static function addOpenningBracket($data)
@@ -77,7 +82,10 @@ class Dump
                             background: transparent;'
                             class='block opened'>-</div> {";
         }else{
-            $str = $data;
+            $str = "<span style='
+                    padding: 2px 10px;
+                    box-sizing: border-box;
+                    ";
         }
 
         return $str;
