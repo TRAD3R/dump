@@ -8,7 +8,7 @@ It requires PHP 5.3 or later.
 Install
 -----
 
-composer trad3r/dump:*
+composer trad3r/dump:dev-master
 
 Usage
 -----
