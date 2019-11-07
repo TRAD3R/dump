@@ -16,9 +16,11 @@
     ],
     "require": {
         "php": ">=5.3.3"
-    },    
+    },
     "autoload": {
-        "files": [ "Dump.php" ]        
-    },    
+        "psr-0": {
+            "trad3r\\dump\\": "src"
+        }
+    },  
     "minimum-stability": "dev"
 }
